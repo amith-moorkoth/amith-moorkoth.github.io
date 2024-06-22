@@ -9,13 +9,23 @@
       href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
       rel="stylesheet"
     />
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+      rel="stylesheet"
+    />
     <!-- Custom CSS -->
     <style>
       body {
         font-family: Arial, Helvetica, sans-serif;
         line-height: 1.6;
-        background-color: #f0f0f0;
+        background-color: white;
         color: #333;
+        transform: scaleX(1.13674);
       }
       .container {
         max-width: 900px;
@@ -27,21 +37,20 @@
       }
       .header {
         text-align: center;
-        border-bottom: 2px solid #000;
-        padding-bottom: 20px;
-        margin-bottom: 30px;
       }
       .header h1 {
         margin: 0;
         padding: 0;
-        font-size: 2.5em;
+        font-size: 2.7em;
         color: #000;
-        letter-spacing: 2px;
+        letter-spacing: 1px;
+        margin-left: -93px;
       }
       .header p {
-        margin: 5px 0;
-        font-size: 1.2em;
-        color: #555;
+        font-size: 19px;
+        color: #303953;
+        font-weight: 700;
+        margin-left: 5px;
       }
       .header .contact-info {
         margin-top: 15px;
@@ -52,12 +61,13 @@
       }
       .section-title {
         margin-bottom: 20px;
-        font-size: 1.8em;
+        margin-left: 35px;
+        font-size: 25px;
         color: #000;
         border-bottom: 2px solid #000;
-        padding-bottom: 10px;
-        letter-spacing: 1px;
+        padding-bottom: 5px;
       }
+
       .skills-list,
       .experience-list {
         list-style-type: none;
@@ -72,17 +82,22 @@
         flex-wrap: wrap;
       }
       .skills-list li {
-        width: 45%;
-        margin-right: 10px;
-        background-color: #f0f0f0;
-        padding: 8px 12px;
-        border-radius: 4px;
-        margin-bottom: 10px;
-        font-size: 0.9em;
-        transition: background-color 0.3s ease;
+        background-color: black;
+        color: white;
+        padding: 8px 15px;
+        border-radius: 20px;
+        margin-left: 4px;
+        margin-bottom: 0px;
+        font-size: 0.95em;
+        transition: all 0.3s ease;
+      }
+      .skills-list.newcss li {
+        padding: 8px 6px !important;
       }
       .skills-list li:hover {
-        background-color: #e0e0e0;
+        background-color: #2980b9;
+        transform: translateY(-3px);
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
       }
       a {
         color: #000;
@@ -95,19 +110,209 @@
       .section {
         margin-bottom: 30px;
       }
+
+      .section a {
+        position: relative;
+        text-decoration: none;
+      }
+
+      .section a::after {
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 1px;
+        bottom: 0;
+        left: 0;
+        background-color: #000;
+        transform: scaleX(0);
+        transform-origin: bottom right;
+        transition: transform 0.3s ease;
+      }
+
+      .section a:hover::after {
+        transform: scaleX(1);
+        transform-origin: bottom left;
+      }
+
       .experience-list li {
         margin-bottom: 15px;
       }
       h3 {
-        color: #333;
+        color: #000000;
         margin-bottom: 5px;
       }
       .profile-pic img {
-        max-width: 100%;
+        border-radius: 100%;
+        height: 180px;
+        box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+      }
+      .profile-pic:hover {
+        transform: scale(1.05);
+      }
+      .icon-ini {
+        background: black;
+        color: white;
+        border-radius: 100%;
+        font-size: 18px !important;
+        padding: 10px;
+        padding-left: 12px;
+        float: left;
+        width: 38px;
+        height: 38px;
+        margin-top: 2px;
+        margin-left: -8px;
+      }
+
+      .info-row {
+        /* border-bottom: 1px solid #e9ecef; */
+        /* padding-bottom: 15px; */
+        margin-bottom: 15px;
+      }
+      .info-item {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+      }
+      .info-item:hover .info-icon {
+        transform: rotate(360deg);
+      }
+      .info-icon {
+        background: black;
+        color: white;
+        border-radius: 100%;
+        font-size: 18px !important;
+        padding: 10px;
+        width: 38px;
+        height: 38px;
+
+        transition: transform 0.3s ease;
+      }
+      .quote-box {
+        background-color: #ecf0f1;
+        border-left: 5px solid black;
+        padding: 20px;
+        margin-top: 30px;
+        box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+        padding-left: 12px;
+        padding-right: 12px;
+        transition: background-color 0.3s ease;
+      }
+      .quote-box:hover {
+        background-color: #d6e0e8;
+      }
+      .quote-text {
+        font-size: 1.2rem;
+        color: #2c3e50;
+      }
+      .achievement-text {
+        font-size: 0.9rem;
+      }
+      .location-row {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-top: 15px;
+        background: #f1f3f5;
+      }
+      .location-icon {
+        font-size: 20px;
+        color: black;
+        margin-right: 0px;
+      }
+      .location-text {
+        font-size: 15px !important;
+        margin: 0;
+      }
+
+      .timeline {
+        position: relative;
+        /* padding-left: 50px; */
+        margin-top: 20px;
+      }
+
+      .timeline::before {
+        /*content: "";
+        position: absolute;
+        left: 20px;
+        top: 0;
+        width: 2px;
+        height: 100%;
+        background-color: black;*/
+      }
+
+      .timeline-item {
+        position: relative;
+        margin-bottom: 30px;
+        transform: translateY(20px);
+        transition: opacity 0.5s ease, transform 0.5s ease;
+      }
+
+      .timeline-item:hover {
+        transform: translateY(0);
+      }
+
+      .timeline-icon {
+        position: absolute;
+        left: -50px;
+        top: 0;
+        width: 40px;
+        height: 40px;
+        background-color: black;
         border-radius: 50%;
-        border: 3px solid #000;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: white;
+        font-size: 20px;
+        box-shadow: 0 0 0 4px #fff, inset 0 2px 0 rgba(0, 0, 0, 0.08),
+          0 3px 0 4px rgba(0, 0, 0, 0.05);
+      }
+
+      .timeline-content {
+        background-color: #f8f9fa;
+        padding: 20px;
+        border-radius: 5px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      }
+
+      .timeline-content h3 {
+        margin-top: 0;
+        color: #2c3e50;
+      }
+
+      .timeline-content h4 {
+        color: black;
+        margin-bottom: 5px;
+      }
+
+      .timeline-date {
+        font-style: italic;
+        color: #7f8c8d;
+        margin-bottom: 15px;
+      }
+
+      .experience-list {
+        padding-left: 20px;
+      }
+
+      .experience-list li {
+        margin-bottom: 10px;
+      }
+
+      .experience-list li::before {
+        font-family: "Font Awesome 6 Free";
+        content: "\f005"; /* Unicode for the briefcase icon */
       }
     </style>
+    <link
+      rel="stylesheet"
+      href="file:///C:/Users/amithmoorkoth/Desktop/resume/font-awesome-4.7.0/css/font-awesome.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
   </head>
   <body>
     <div class="container">
@@ -115,23 +320,68 @@
         <div class="col-md-5 col-md-offset-2">
           <div class="row">
             <div class="section">
-              <div class="profile-pic">
-                <img
-                  src="data:image/png;base64,<?= base64_encode(file_get_contents('/mnt/data/image.png')) ?>"
-                  alt="Profile Picture"
-                />
+              <div style="margin-top: 75px">
+                <div
+                  style="
+                    background: white;
+                    width: 787px;
+                    border-radius: 35px 0px 0px 35px;
+                    padding-left: 95px;
+                    padding-top: 20px;
+                    padding-bottom: 20px;
+                  "
+                >
+                  <div
+                    style="
+                      border-left: 4px solid black;
+                      border-radius: 100%;
+                      padding: 11px;
+                      display: table;
+                    "
+                  >
+                    <div
+                      style="
+                        border-left: 2px solid black;
+                        border-radius: 100%;
+                        padding: 11px;
+                      "
+                    >
+                      <div
+                        class="profile-pic"
+                        style="
+                          background: url(file:///C:/Users/amithmoorkoth/Desktop/resume/pic.jpg);
+                          height: 190px;
+                          width: 160px;
+                          background-size: cover;
+                          border-radius: 100%;
+                          background-position: center;
+                        "
+                      >
+                        <img
+                          src="file:///C:/Users/amithmoorkoth/Desktop/resume/pic.jpg"
+                          alt="Profile Picture"
+                          style="display: none"
+                        />
+                      </div>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
 
             <div class="section">
-              <h2 class="section-title">Core Competencies</h2>
+              <i class="fa fa-cogs icon-ini" aria-hidden="true"></i>
+              <h2 class="section-title" style="margin-right: 125px">
+                Technical Skills
+              </h2>
               <ul class="skills-list">
                 <li>React.js</li>
-                <li>JavaScript</li>
+                <li>JavaScript(ES6)</li>
                 <li>SQL</li>
-                <li>C#</li>
                 <li>JQuery</li>
                 <li>HTML</li>
+                <li>CSS</li>
+                <li>Redux</li>
                 <li>Bootstrap</li>
                 <li>Ajax</li>
                 <li>GIT</li>
@@ -139,27 +389,91 @@
                 <li>Bitbucket</li>
                 <li>Postman</li>
                 <li>Webpack</li>
+                <li>Babel</li>
+                <li>Node.js</li>
+                <li>React Hooks</li>
+                <li>Context API</li>
+                <li>Code Review</li>
+                <li>CI/CD (Jenkins)</li>
                 <li>JIRA</li>
                 <li>CSS</li>
               </ul>
             </div>
 
             <div class="section">
-              <h2 class="section-title">Technical Skills</h2>
-              <ul class="skills-list">
-                <li>React.js</li>
-                <li>Front End Framework</li>
-                <li>CSS</li>
-                <li>ES6</li>
+              <i
+                class="fa fa-star icon-ini"
+                aria-hidden="true"
+                style="padding-left: 9px"
+              ></i>
+              <h2 class="section-title" style="margin-right: 70px">
+                Core Competencies
+              </h2>
+              <ul class="skills-list newcss">
+                <li>Front-End Architecture</li>
+                <li>UI/UX Development</li>
+                <li>Responsive Web Design</li>
+                <li>Single Page Applications (SPA)</li>
+                <li>State Management</li>
+                <li>Asynchronous Programming</li>
+                <li>Component-Based Development</li>
+                <li>Web Performance Optimization</li>
+                <li>Cross-Browser Compatibility</li>
+                <li>Mobile-First Development</li>
+                <li>RESTful API Integration</li>
+                <li>Git Version Control</li>
+                <li>Agile/Scrum Methodologies</li>
+                <li>Test-Driven Development (TDD)</li>
+                <li>Code Review</li>
+                <li>Debugging Tools (Chrome DevTools)</li>
+                <li>Progressive Web Apps (PWA)</li>
+                <li>Client-Side Security(authentication and authorization)</li>
+                <li>Technical Documentation</li>
+                <li>Scalable Code Architecture</li>
+                <li>Browser Developer Tools</li>
+                <li>Code Optimization</li>
               </ul>
             </div>
 
             <div class="section">
+              <i class="fa fa-info-circle icon-ini" aria-hidden="true"></i>
               <h2 class="section-title">Personal Information</h2>
-              <p>Date of Birth: 18-Jul-1992</p>
-              <p>Gender: Male</p>
-              <p>City: Bengaluru</p>
-              <p>Country: India</p>
+              <table>
+                <tbody>
+                  <tr>
+                    <td style="min-width: 130px">Date of Birth:</td>
+                    <td><strong>18-Jul-1992</strong></td>
+                  </tr>
+                  <tr>
+                    <td>Gender:</td>
+                    <td><strong>Male</strong></td>
+                  </tr>
+                  <tr>
+                    <td>Country:</td>
+                    <td><strong>India</strong></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+
+            <div class="section">
+              <i
+                class="fa fa-graduation-cap icon-ini"
+                aria-hidden="true"
+                style="padding-left: 9px"
+              ></i>
+              <h2 class="section-title" style="margin-right: 296px">
+                Education
+              </h2>
+              <ul class="experience-list">
+                <li>
+                  B.Tech Information Technology, Government Engineering College
+                  - Barton Hill Tvm, 2017
+                </li>
+                <li>Nttf Diploma in IT, 2013</li>
+                <li>12th, CBSE, English, 2010</li>
+                <li>10th, CBSE, English, 2008</li>
+              </ul>
             </div>
           </div>
         </div>
@@ -178,114 +492,266 @@
           >
             <div class="section">
               <div class="header">
-                <h1>amith moorkoth</h1>
-                <p>Senior Software Engineer</p>
-                <div class="contact-info">
-                  <p>Phone: 8891025267</p>
-                  <p>
-                    Email:
-                    <a href="mailto:m.amitkan@gmail.com">m.amitkan@gmail.com</a>
-                  </p>
-                  <p>Location: Bengaluru, India</p>
+                <h1>Amith Moorkoth</h1>
+                <p style="margin-left: -236px">Software Engineer</p>
+                <div class="row justify-content-center">
+                  <div class="col-md-12">
+                    <div class="profile-card">
+                      <div class="row info-row">
+                        <div class="col-md-4 info-item">
+                          <div>
+                            <i
+                              class="fas fa-briefcase info-icon"
+                              style="
+                                width: 25px;
+                                height: 25px;
+                                font-size: 14px !important;
+                                padding: 5px !important;
+                              "
+                            ></i>
+                            <div>6 Years 2 Months</div>
+                          </div>
+                        </div>
+                        <div class="col-md-4 info-item">
+                          <div>
+                            <i
+                              class="fas fa-phone info-icon"
+                              style="
+                                width: 25px;
+                                height: 25px;
+                                font-size: 14px !important;
+                                padding: 5px !important;
+                              "
+                            ></i>
+                            <div>8891025267</div>
+                          </div>
+                        </div>
+                        <div class="col-md-4 info-item">
+                          <div>
+                            <i
+                              class="fas fa-envelope info-icon"
+                              style="
+                                width: 25px;
+                                height: 25px;
+                                font-size: 14px !important;
+                                padding: 5px !important;
+                              "
+                            ></i>
+                            <div>m.amitkan@gmail.com</div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="location-row">
+                        <i
+                          class="fa fa-map-marker-alt location-icon"
+                          aria-hidden="true"
+                        ></i>
+                        <p class="location-text">Bangalore, India</p>
+                      </div>
+                      <div class="quote-box">
+                        <p style="font-size: unset">
+                          Front End Developer with Expertise in React JS & ES6.
+                        </p>
+                        <p style="font-size: unset; font-weight: unset">
+                          Achievement-driven professional, targeting senior
+                          level assignments with an organization of high repute
+                        </p>
+                      </div>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
             <div class="section">
-              <h2 class="section-title">Profile Summary</h2>
+              <i
+                class="fa fa-user icon-ini"
+                aria-hidden="true"
+                style="padding-left: 12px"
+              ></i>
+              <h2 class="section-title" style="margin-right: 216px">
+                Profile Summary
+              </h2>
               <p>
-                Highly skilled and detail-oriented Full Stack Developer with 5+
-                years of experience designing, implementing, and maintaining web
-                applications. Adept at collaborating with cross-functional teams
-                to drive project success. Proficient in both front-end and
-                back-end technologies, with a strong focus on delivering
-                scalable and efficient solutions. Demonstrated expertise in the
-                complete software development lifecycle, from concept to
-                deployment.
+                Results-driven Front End Developer with over 6+ years of
+                experience in building dynamic and responsive web applications
+                using React JS, ES6, and modern JavaScript frameworks. Expert in
+                state management with Redux, context API, and Hooks. Proficient
+                in HTML5, CSS3. Strong experience in RESTful API integration,
+                asynchronous programming, and optimizing front-end performance.
+                Skilled in version control systems like Git and CI/CD pipelines
+                with Jenkins. Familiar with TypeScript, Webpack, Babel, and
+                modern front-end tooling. Committed to writing clean,
+                maintainable code and following best practices in Agile
+                environments. Seeking to leverage my expertise in a challenging
+                role that pushes the boundaries of web development.
               </p>
             </div>
 
             <div class="section">
-              <h2 class="section-title">Work Experience</h2>
-              <h3>Senior Software Engineer at Grasko Solutions</h3>
-              <p>April 2018 - Present</p>
-              <ul class="experience-list">
-                <li>
-                  Led the front-end development team in designing and
-                  implementing responsive and visually stunning user interfaces
-                  for a variety of client projects.
-                </li>
-                <li>
-                  Spearheaded the migration of a legacy front-end codebase to a
-                  modern framework (e.g., React), improving maintainability and
-                  enabling the integration of new features.
-                </li>
-                <li>
-                  Utilized browser developer tools and other debugging utilities
-                  to identify and resolve issues related to rendering,
-                  performance, and compatibility across various browsers.
-                </li>
-                <li>
-                  Implemented performance optimization techniques, resulting in
-                  a reduction of page load times for key client websites.
-                </li>
-                <li>
-                  Collaborated with back-end developers to troubleshoot and
-                  resolve integration issues between front-end and back-end
-                  systems.
-                </li>
-                <li>
-                  Conducted regular code reviews, provided constructive
-                  feedback, and maintained coding standards to ensure
-                  high-quality and maintainable code.
-                </li>
-                <li>
-                  Implemented and maintained automated testing procedures for
-                  front-end components, reducing the number of post-release
-                  bugs.
-                </li>
-                <li>
-                  Actively participated in Agile development methodologies,
-                  contributing to sprint planning, daily stand-ups, and
-                  retrospectives.
-                </li>
-              </ul>
+              <i class="fa fa-briefcase icon-ini" aria-hidden="true"></i>
+              <h2 class="section-title" style="margin-right: 216px">
+                Work Experience
+              </h2>
+              <div class="timeline">
+                <div class="timeline-item">
+                  <div class="timeline-content">
+                    <h3>Software Engineer</h3>
+                    <h4>Grasko Solutions</h4>
+                    <p class="timeline-date">April 2018 - Present</p>
+                    <ul class="experience-list">
+                      <li>
+                        Developed and maintained complex web applications using
+                        React.js.
+                      </li>
+                      <li>
+                        Implemented state management using Redux and Context
+                        API.
+                      </li>
+                      <li>
+                        Optimized application performance through code-splitting
+                        and lazy loading.
+                      </li>
+                      <li>
+                        Utilized React Hooks for cleaner and more efficient
+                        code.
+                      </li>
+                      <li>
+                        Integrated RESTful APIs and GraphQL for data fetching
+                        and manipulation.
+                      </li>
+                      <li>
+                        Ensured cross-browser compatibility and responsiveness
+                        through CSS-in-JS libraries and styled-components.
+                      </li>
+                      <li>
+                        Collaborated with backend developers to design and
+                        implement microservices architecture.
+                      </li>
+                      <li>
+                        Led code reviews and mentored junior developers on best
+                        practices and coding standards.
+                      </li>
+                      <li>
+                        Worked with CI/CD pipelines using Jenkins, Docker, and
+                        Kubernetes for seamless deployment and scaling.
+                      </li>
+                      <li>
+                        Participated in Agile/Scrum ceremonies and contributed
+                        to sprint planning and retrospectives.
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+                <!-- Add more timeline-item divs as needed -->
+              </div>
             </div>
 
             <div class="section">
-              <h2 class="section-title">Education</h2>
-              <p>
-                B.Tech/B.E., Government Engineering College - Barton Hill, 2017
-              </p>
-              <p>12th, CBSE, English, 2010</p>
-              <p>10th, CBSE, English, 2008</p>
-            </div>
+              <i class="fa fa-folder-open icon-ini" aria-hidden="true"></i>
+              <h2 class="section-title" style="margin-right: 326px">
+                Projects
+              </h2>
 
-            <div class="section">
-              <h2 class="section-title">Projects</h2>
-              <h3>Bombie - Drag and Drop UI Builder</h3>
-              <p>5 Months</p>
-              <p>
-                <a href="https://github.com/amith-moorkoth/bombie"
-                  >https://github.com/amith-moorkoth/bombie</a
-                >
-              </p>
-              <p>
-                This project is used to build UI based on the material UI drag
-                and drop functionality in the React technology.
-              </p>
+              <div class="timeline">
+                <div class="timeline-item">
+                  <div class="timeline-content">
+                    <h3 style="font-size: x-large">
+                      CDA - Care Devliery App(Grasko Solutions)
+                    </h3>
+                    <p>Feb 2020 - Present</p>
+                    <p>
+                      CDA is a JSON-based component rendering platform designed
+                      for creating forms with existing components. It features a
+                      custom Redux handler for state management, which
+                      automatically saves component data to MongoDB on every
+                      change. This auto-saving functionality is debounced to
+                      prevent excessive updates. The primary goal of the CDA
+                      project is to simplify the creation of forms using
+                      existing components within the system.
+                    </p>
 
-              <h3>Bouncey - Game made of HTML and JavaScript</h3>
-              <p>2 Months</p>
-              <p>
-                <a href="https://github.com/amith-moorkoth/bounce"
-                  >https://github.com/amith-moorkoth/bounce</a
-                >
-              </p>
-              <p>
-                This was developed from the college time, and many people have
-                downloaded the game from the Play Store and it was successful in
-                the college days.
-              </p>
+                    <ol>
+                      <li>
+                        <p>JSON-based component rendering platform</p>
+                      </li>
+                      <li>
+                        <p>Custom Redux handler for state management</p>
+                      </li>
+                      <li>
+                        <p>
+                          Automatic saving of component data to MongoDB with
+                          debouncing
+                        </p>
+                      </li>
+                      <li>
+                        <p>
+                          Simplified form creation using existing components
+                        </p>
+                      </li>
+                    </ol>
+                  </div>
+                </div>
+                <div class="timeline-item">
+                  <div class="timeline-content">
+                    <h3 style="font-size: x-large">
+                      Bombie - Drag and Drop UI Builder
+                    </h3>
+                    <p>April 2022 - Present(not active)</p>
+                    <p>
+                      <a href="https://github.com/amith-moorkoth/bombie"
+                        >https://github.com/amith-moorkoth/bombie</a
+                      >
+                    </p>
+                    <p>
+                      Bombie is a drag-and-drop builder for Material-UI
+                      components in React, designed to streamline the creation
+                      of React components through an intuitive interface. This
+                      tool allows users to visually assemble Material-UI
+                      components and generate corresponding React code,
+                      significantly simplifying the development process.
+                    </p>
+
+                    <ol>
+                      <li>
+                        <p>
+                          <strong>Drag-and-Drop Interface</strong>: This feature
+                          allows you to easily arrange and organize components
+                          by dragging and dropping them. It’s a convenient way
+                          to create complex UI layouts without writing extensive
+                          code manually.
+                        </p>
+                      </li>
+                      <li>
+                        <p>
+                          <strong>Code Generation</strong>: Material-UI’s
+                          automatic code generation is a time-saving feature. As
+                          you design your UI visually, it generates React
+                          component code for you. This ensures consistency and
+                          reduces the chances of errors.
+                        </p>
+                      </li>
+                      <li>
+                        <p>
+                          <strong>Component Customization</strong>: Being able
+                          to customize Material-UI components directly within
+                          the interface is fantastic. You can tweak properties
+                          like colors, typography, and spacing to match your
+                          specific design requirements.
+                        </p>
+                      </li>
+                      <li>
+                        <p>
+                          <strong>Real-time Preview</strong>: The real-time
+                          preview feature is invaluable. As you make changes to
+                          components, you can instantly see how they’ll appear
+                          in the final UI. This helps you iterate quickly and
+                          make informed design decisions.
+                        </p>
+                      </li>
+                    </ol>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
