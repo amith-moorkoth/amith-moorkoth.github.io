@@ -1,0 +1,209 @@
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<!------ Include the above in your HEAD tag ---------->
+
+ <script>
+
+        //Init Function
+        var paper = function () {
+            var vwtWidth = window.innerWidth;
+            var vwtHeight = window.innerHeight;
+            var cns = document.createElement("canvas");
+            cns.width = vwtWidth;
+            cns.height = vwtHeight;
+            document.body.appendChild(cns);
+            var ctx = cns.getContext("2d");
+            var angle = 0;
+            var direction = "clockwise";
+            window.onmousemove = function (ev) {
+                if (ev.clientX < vwtWidth / 5) {
+                    direction = "clockwise";
+                } else if (ev.clientX > vwtWidth / 5) {
+                    direction = "anticlockwise";
+                }
+            };
+            var gesture = function () {
+                if (direction == "clockwise") {
+                    angle++;
+                } else if (direction == "anticlockwise") {
+                    angle--;
+                }
+            };
+
+            //Particles Constructor
+            var particles = new Array();
+            var Particle = function (pathRadius, particleRadius) {
+                this.pathRadius = Math.round(Math.random() * 500);
+                this.particleRadius = Math.round(Math.random() * 2);
+                this.pathX = Math.round(Math.random() * vwtWidth);
+                this.pathY = Math.round(Math.random() * vwtHeight);
+                this.hue = "rgba(127, 127, 127," + Math.random().toFixed(1) + ")";
+            };
+            for (var i = 0; i < 1500; i++) {
+                particles[i] = new Particle();
+            }
+
+            //Paint the Canvas
+            function paint(param) {
+                var x =
+                    particles[param].pathX +
+                    particles[param].pathRadius * Math.cos(angle / 180 * Math.PI) -
+                    particles[param].pathRadius / 2;
+                var y =
+                    particles[param].pathY +
+                    particles[param].pathRadius * Math.sin(angle / 180 * Math.PI) -
+                    particles[param].pathRadius / 2;
+                ctx.beginPath();
+                ctx.arc(x, y, particles[param].particleRadius, 0, 2 * Math.PI);
+                ctx.fillStyle = particles[param].hue;
+                ctx.closePath();
+                ctx.fill();
+            }
+
+            //Generating Frames
+            var animate = function () {
+                ctx.fillStyle = "#DFE0E4";
+                ctx.fillRect(0, 0, vwtWidth, vwtHeight);
+                for (var j = 0; j < 1500; j++) {
+                    paint(j);
+                }
+                window.requestAnimationFrame(animate);
+                gesture();
+            };
+            animate();
+        };
+        //Initialization
+        window.addEventListener("load", paper);
+
+    </script>
+<style>
+   body{
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+        }
+    canvas {
+        width: 100%;
+        height: 100vh;
+        overflow: hidden;
+    }
+ 
+HTML,
+BODY {
+  height: 100%;
+}
+
+.webcoderskull {
+  font-size: 0.5em;
+}
+
+svg {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  font: 16em/1 Arial;
+}
+
+.webcoderskull-1 {
+  fill: none;
+  stroke: white;
+  stroke-dasharray: 7% 28%;
+  stroke-width: 3px;
+  -webkit-animation: stroke-offset 7s infinite ease-in-out;
+          animation: stroke-offset 7s infinite ease-in-out;
+}
+.webcoderskull-1:nth-child(1) {
+  stroke: #360745;
+  stroke-dashoffset: 7%;
+}
+.webcoderskull-1:nth-child(2) {
+  stroke: #d61c59;
+  stroke-dashoffset: 14%;
+}
+.webcoderskull-1:nth-child(3) {
+  stroke: #e7d84b;
+  stroke-dashoffset: 21%;
+}
+.webcoderskull-1:nth-child(4) {
+  stroke: #efeac5;
+  stroke-dashoffset: 28%;
+}
+.webcoderskull-1:nth-child(5) {
+  stroke: #1b8798;
+  stroke-dashoffset: 35%;
+}
+
+@-webkit-keyframes stroke-offset {
+  50% {
+    stroke-dashoffset: 35%;
+    stroke-dasharray: 0 87.5%;
+  }
+}
+
+@keyframes stroke-offset {
+  50% {
+    stroke-dashoffset: 35%;
+    stroke-dasharray: 0 87.5%;
+  }
+}
+
+</style>
+
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<!------ Include the above in your HEAD tag ---------->
+
+<svg viewBox="0 0 1800 600">
+  <symbol id="s-text">
+    <text text-anchor="middle"
+          x="50%"
+          y="35%"
+          class="webcoderskull"
+          >
+     Designer of the Illusion
+    </text>
+    <text text-anchor="middle"
+          x="50%"
+          y="68%"
+          class="text--line"
+          >
+     
+      Amith Moorkoth
+    </text>
+    
+  </symbol>
+  
+  <g class="g-ants">
+    <use xlink:href="#s-text"
+      class="webcoderskull-1"></use>     
+    <use xlink:href="#s-text"
+      class="webcoderskull-1"></use>     
+    <use xlink:href="#s-text"
+      class="webcoderskull-1"></use>     
+    <use xlink:href="#s-text"
+      class="webcoderskull-1"></use>     
+    <use xlink:href="#s-text"
+      class="webcoderskull-1"></use>     
+  </g>
+  
+  
+</svg>
+<body>
+ <div style="display:none;"> ..</div>
+ <a href="https://github.com/amith-moorkoth"><button class="btn btn-lg btn-primary btn-block" style="
+    position: absolute;
+    background: #007bff;
+    border-color: #007bff;
+    color: #fff;
+    padding: 0.5rem 1rem;
+    font-size: 1.25rem;
+    line-height: 1.5;
+    border-radius: 0.3rem;
+    cursor: pointer;
+    left: 45%;
+    bottom: 2%;
+    width: 10%;
+">GitHub</button></a>
+</body>

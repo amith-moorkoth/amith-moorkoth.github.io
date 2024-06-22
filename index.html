@@ -1,209 +1,300 @@
-<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
-<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
-<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-<!------ Include the above in your HEAD tag ---------->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Resume - Amith Moorkoth</title>
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <!-- Custom CSS -->
+    <style>
+      body {
+        font-family: Arial, Helvetica, sans-serif;
+        line-height: 1.6;
+        background-color: #f0f0f0;
+        color: #333;
+      }
+      .container {
+        max-width: 900px;
+        margin: 20px auto;
+        background-color: #f3f5fa;
+        padding: 30px;
+        box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+        border-radius: 8px;
+      }
+      .header {
+        text-align: center;
+        border-bottom: 2px solid #000;
+        padding-bottom: 20px;
+        margin-bottom: 30px;
+      }
+      .header h1 {
+        margin: 0;
+        padding: 0;
+        font-size: 2.5em;
+        color: #000;
+        letter-spacing: 2px;
+      }
+      .header p {
+        margin: 5px 0;
+        font-size: 1.2em;
+        color: #555;
+      }
+      .header .contact-info {
+        margin-top: 15px;
+      }
+      .header .contact-info p {
+        margin: 5px 0;
+        font-size: 0.9em;
+      }
+      .section-title {
+        margin-bottom: 20px;
+        font-size: 1.8em;
+        color: #000;
+        border-bottom: 2px solid #000;
+        padding-bottom: 10px;
+        letter-spacing: 1px;
+      }
+      .skills-list,
+      .experience-list {
+        list-style-type: none;
+        padding: 0;
+      }
+      .skills-list li,
+      .experience-list li {
+        margin: 10px 0;
+      }
+      .skills-list {
+        display: flex;
+        flex-wrap: wrap;
+      }
+      .skills-list li {
+        width: 45%;
+        margin-right: 10px;
+        background-color: #f0f0f0;
+        padding: 8px 12px;
+        border-radius: 4px;
+        margin-bottom: 10px;
+        font-size: 0.9em;
+        transition: background-color 0.3s ease;
+      }
+      .skills-list li:hover {
+        background-color: #e0e0e0;
+      }
+      a {
+        color: #000;
+        text-decoration: none;
+        transition: color 0.3s ease;
+      }
+      a:hover {
+        color: #555;
+      }
+      .section {
+        margin-bottom: 30px;
+      }
+      .experience-list li {
+        margin-bottom: 15px;
+      }
+      h3 {
+        color: #333;
+        margin-bottom: 5px;
+      }
+      .profile-pic img {
+        max-width: 100%;
+        border-radius: 50%;
+        border: 3px solid #000;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-5 col-md-offset-2">
+          <div class="row">
+            <div class="section">
+              <div class="profile-pic">
+                <img
+                  src="data:image/png;base64,<?= base64_encode(file_get_contents('/mnt/data/image.png')) ?>"
+                  alt="Profile Picture"
+                />
+              </div>
+            </div>
 
- <script>
+            <div class="section">
+              <h2 class="section-title">Core Competencies</h2>
+              <ul class="skills-list">
+                <li>React.js</li>
+                <li>JavaScript</li>
+                <li>SQL</li>
+                <li>C#</li>
+                <li>JQuery</li>
+                <li>HTML</li>
+                <li>Bootstrap</li>
+                <li>Ajax</li>
+                <li>GIT</li>
+                <li>Npm</li>
+                <li>Bitbucket</li>
+                <li>Postman</li>
+                <li>Webpack</li>
+                <li>JIRA</li>
+                <li>CSS</li>
+              </ul>
+            </div>
 
-        //Init Function
-        var paper = function () {
-            var vwtWidth = window.innerWidth;
-            var vwtHeight = window.innerHeight;
-            var cns = document.createElement("canvas");
-            cns.width = vwtWidth;
-            cns.height = vwtHeight;
-            document.body.appendChild(cns);
-            var ctx = cns.getContext("2d");
-            var angle = 0;
-            var direction = "clockwise";
-            window.onmousemove = function (ev) {
-                if (ev.clientX < vwtWidth / 5) {
-                    direction = "clockwise";
-                } else if (ev.clientX > vwtWidth / 5) {
-                    direction = "anticlockwise";
-                }
-            };
-            var gesture = function () {
-                if (direction == "clockwise") {
-                    angle++;
-                } else if (direction == "anticlockwise") {
-                    angle--;
-                }
-            };
+            <div class="section">
+              <h2 class="section-title">Technical Skills</h2>
+              <ul class="skills-list">
+                <li>React.js</li>
+                <li>Front End Framework</li>
+                <li>CSS</li>
+                <li>ES6</li>
+              </ul>
+            </div>
 
-            //Particles Constructor
-            var particles = new Array();
-            var Particle = function (pathRadius, particleRadius) {
-                this.pathRadius = Math.round(Math.random() * 500);
-                this.particleRadius = Math.round(Math.random() * 2);
-                this.pathX = Math.round(Math.random() * vwtWidth);
-                this.pathY = Math.round(Math.random() * vwtHeight);
-                this.hue = "rgba(127, 127, 127," + Math.random().toFixed(1) + ")";
-            };
-            for (var i = 0; i < 1500; i++) {
-                particles[i] = new Particle();
-            }
-
-            //Paint the Canvas
-            function paint(param) {
-                var x =
-                    particles[param].pathX +
-                    particles[param].pathRadius * Math.cos(angle / 180 * Math.PI) -
-                    particles[param].pathRadius / 2;
-                var y =
-                    particles[param].pathY +
-                    particles[param].pathRadius * Math.sin(angle / 180 * Math.PI) -
-                    particles[param].pathRadius / 2;
-                ctx.beginPath();
-                ctx.arc(x, y, particles[param].particleRadius, 0, 2 * Math.PI);
-                ctx.fillStyle = particles[param].hue;
-                ctx.closePath();
-                ctx.fill();
-            }
-
-            //Generating Frames
-            var animate = function () {
-                ctx.fillStyle = "#DFE0E4";
-                ctx.fillRect(0, 0, vwtWidth, vwtHeight);
-                for (var j = 0; j < 1500; j++) {
-                    paint(j);
-                }
-                window.requestAnimationFrame(animate);
-                gesture();
-            };
-            animate();
-        };
-        //Initialization
-        window.addEventListener("load", paper);
-
-    </script>
-<style>
-   body{
-            margin: 0;
-            padding: 0;
-            overflow: hidden;
-        }
-    canvas {
-        width: 100%;
-        height: 100vh;
-        overflow: hidden;
-    }
- 
-HTML,
-BODY {
-  height: 100%;
-}
-
-.webcoderskull {
-  font-size: 0.5em;
-}
-
-svg {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  font: 16em/1 Arial;
-}
-
-.webcoderskull-1 {
-  fill: none;
-  stroke: white;
-  stroke-dasharray: 7% 28%;
-  stroke-width: 3px;
-  -webkit-animation: stroke-offset 7s infinite ease-in-out;
-          animation: stroke-offset 7s infinite ease-in-out;
-}
-.webcoderskull-1:nth-child(1) {
-  stroke: #360745;
-  stroke-dashoffset: 7%;
-}
-.webcoderskull-1:nth-child(2) {
-  stroke: #d61c59;
-  stroke-dashoffset: 14%;
-}
-.webcoderskull-1:nth-child(3) {
-  stroke: #e7d84b;
-  stroke-dashoffset: 21%;
-}
-.webcoderskull-1:nth-child(4) {
-  stroke: #efeac5;
-  stroke-dashoffset: 28%;
-}
-.webcoderskull-1:nth-child(5) {
-  stroke: #1b8798;
-  stroke-dashoffset: 35%;
-}
-
-@-webkit-keyframes stroke-offset {
-  50% {
-    stroke-dashoffset: 35%;
-    stroke-dasharray: 0 87.5%;
-  }
-}
-
-@keyframes stroke-offset {
-  50% {
-    stroke-dashoffset: 35%;
-    stroke-dasharray: 0 87.5%;
-  }
-}
-
-</style>
-
-<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
-<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
-<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-<!------ Include the above in your HEAD tag ---------->
-
-<svg viewBox="0 0 1800 600">
-  <symbol id="s-text">
-    <text text-anchor="middle"
-          x="50%"
-          y="35%"
-          class="webcoderskull"
+            <div class="section">
+              <h2 class="section-title">Personal Information</h2>
+              <p>Date of Birth: 18-Jul-1992</p>
+              <p>Gender: Male</p>
+              <p>City: Bengaluru</p>
+              <p>Country: India</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-7">
+          <div
+            class="row"
+            style="
+              background: white;
+              padding: 20px;
+              border-radius: 74px 0px 0px 36px;
+              margin-top: -24px;
+              padding-top: 46px;
+              margin-right: -28px;
+              margin-bottom: -24px;
+            "
           >
-     Designer of the Illusion
-    </text>
-    <text text-anchor="middle"
-          x="50%"
-          y="68%"
-          class="text--line"
-          >
-     
-      Amith Moorkoth
-    </text>
-    
-  </symbol>
-  
-  <g class="g-ants">
-    <use xlink:href="#s-text"
-      class="webcoderskull-1"></use>     
-    <use xlink:href="#s-text"
-      class="webcoderskull-1"></use>     
-    <use xlink:href="#s-text"
-      class="webcoderskull-1"></use>     
-    <use xlink:href="#s-text"
-      class="webcoderskull-1"></use>     
-    <use xlink:href="#s-text"
-      class="webcoderskull-1"></use>     
-  </g>
-  
-  
-</svg>
-<body>
- <div style="display:none;"> ..</div>
- <a href="https://github.com/amith-moorkoth"><button class="btn btn-lg btn-primary btn-block" style="
-    position: absolute;
-    background: #007bff;
-    border-color: #007bff;
-    color: #fff;
-    padding: 0.5rem 1rem;
-    font-size: 1.25rem;
-    line-height: 1.5;
-    border-radius: 0.3rem;
-    cursor: pointer;
-    left: 45%;
-    bottom: 2%;
-    width: 10%;
-">GitHub</button></a>
-</body>
+            <div class="section">
+              <div class="header">
+                <h1>amith moorkoth</h1>
+                <p>Senior Software Engineer</p>
+                <div class="contact-info">
+                  <p>Phone: 8891025267</p>
+                  <p>
+                    Email:
+                    <a href="mailto:m.amitkan@gmail.com">m.amitkan@gmail.com</a>
+                  </p>
+                  <p>Location: Bengaluru, India</p>
+                </div>
+              </div>
+            </div>
+            <div class="section">
+              <h2 class="section-title">Profile Summary</h2>
+              <p>
+                Highly skilled and detail-oriented Full Stack Developer with 5+
+                years of experience designing, implementing, and maintaining web
+                applications. Adept at collaborating with cross-functional teams
+                to drive project success. Proficient in both front-end and
+                back-end technologies, with a strong focus on delivering
+                scalable and efficient solutions. Demonstrated expertise in the
+                complete software development lifecycle, from concept to
+                deployment.
+              </p>
+            </div>
+
+            <div class="section">
+              <h2 class="section-title">Work Experience</h2>
+              <h3>Senior Software Engineer at Grasko Solutions</h3>
+              <p>April 2018 - Present</p>
+              <ul class="experience-list">
+                <li>
+                  Led the front-end development team in designing and
+                  implementing responsive and visually stunning user interfaces
+                  for a variety of client projects.
+                </li>
+                <li>
+                  Spearheaded the migration of a legacy front-end codebase to a
+                  modern framework (e.g., React), improving maintainability and
+                  enabling the integration of new features.
+                </li>
+                <li>
+                  Utilized browser developer tools and other debugging utilities
+                  to identify and resolve issues related to rendering,
+                  performance, and compatibility across various browsers.
+                </li>
+                <li>
+                  Implemented performance optimization techniques, resulting in
+                  a reduction of page load times for key client websites.
+                </li>
+                <li>
+                  Collaborated with back-end developers to troubleshoot and
+                  resolve integration issues between front-end and back-end
+                  systems.
+                </li>
+                <li>
+                  Conducted regular code reviews, provided constructive
+                  feedback, and maintained coding standards to ensure
+                  high-quality and maintainable code.
+                </li>
+                <li>
+                  Implemented and maintained automated testing procedures for
+                  front-end components, reducing the number of post-release
+                  bugs.
+                </li>
+                <li>
+                  Actively participated in Agile development methodologies,
+                  contributing to sprint planning, daily stand-ups, and
+                  retrospectives.
+                </li>
+              </ul>
+            </div>
+
+            <div class="section">
+              <h2 class="section-title">Education</h2>
+              <p>
+                B.Tech/B.E., Government Engineering College - Barton Hill, 2017
+              </p>
+              <p>12th, CBSE, English, 2010</p>
+              <p>10th, CBSE, English, 2008</p>
+            </div>
+
+            <div class="section">
+              <h2 class="section-title">Projects</h2>
+              <h3>Bombie - Drag and Drop UI Builder</h3>
+              <p>5 Months</p>
+              <p>
+                <a href="https://github.com/amith-moorkoth/bombie"
+                  >https://github.com/amith-moorkoth/bombie</a
+                >
+              </p>
+              <p>
+                This project is used to build UI based on the material UI drag
+                and drop functionality in the React technology.
+              </p>
+
+              <h3>Bouncey - Game made of HTML and JavaScript</h3>
+              <p>2 Months</p>
+              <p>
+                <a href="https://github.com/amith-moorkoth/bounce"
+                  >https://github.com/amith-moorkoth/bounce</a
+                >
+              </p>
+              <p>
+                This was developed from the college time, and many people have
+                downloaded the game from the Play Store and it was successful in
+                the college days.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Bootstrap JS and dependencies -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  </body>
+</html>
