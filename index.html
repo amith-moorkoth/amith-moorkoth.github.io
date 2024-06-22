@@ -20,12 +20,15 @@
     />
     <!-- Custom CSS -->
     <style>
+      @page {
+      }
       body {
         font-family: Arial, Helvetica, sans-serif;
         line-height: 1.6;
         background-color: white;
         color: #333;
         transform: scaleX(1.13674);
+        font-weight: 400; /* Use appropriate font weight */
       }
       .container {
         max-width: 900px;
@@ -88,7 +91,7 @@
         border-radius: 20px;
         margin-left: 4px;
         margin-bottom: 0px;
-        font-size: 0.95em;
+        font-size: 13px;
         transition: all 0.3s ease;
       }
       .skills-list.newcss li {
@@ -349,7 +352,7 @@
                       <div
                         class="profile-pic"
                         style="
-                          background: url(pic.jpg);
+                          background: url(/pic.jpg);
                           height: 190px;
                           width: 160px;
                           background-size: cover;
@@ -358,7 +361,7 @@
                         "
                       >
                         <img
-                          src="file:///C:/Users/amithmoorkoth/Desktop/resume/pic.jpg"
+                          src="/pic.jpg"
                           alt="Profile Picture"
                           style="display: none"
                         />
@@ -435,7 +438,10 @@
               </ul>
             </div>
 
-            <div class="section">
+            <div
+              class="section"
+              style="page-break-before: always; margin-top: 50px"
+            >
               <i class="fa fa-info-circle icon-ini" aria-hidden="true"></i>
               <h2 class="section-title">Personal Information</h2>
               <table>
@@ -462,7 +468,7 @@
                 aria-hidden="true"
                 style="padding-left: 9px"
               ></i>
-              <h2 class="section-title" style="margin-right: 296px">
+              <h2 class="section-title" style="margin-right: 170px">
                 Education
               </h2>
               <ul class="experience-list">
@@ -473,6 +479,46 @@
                 <li>Nttf Diploma in IT, 2013</li>
                 <li>12th, CBSE, English, 2010</li>
                 <li>10th, CBSE, English, 2008</li>
+              </ul>
+            </div>
+
+            <div class="section">
+              <i
+                class="fa fa-graduation-cap icon-ini"
+                aria-hidden="true"
+                style="padding-left: 9px"
+              ></i>
+              <h2 class="section-title" style="margin-right: 170px">
+                Certificates
+              </h2>
+              <ul class="experience-list">
+                <li>
+                  Javascript Intermediate -
+                  <a
+                    target="_blank"
+                    style="cursor: pointer"
+                    href="https://www.hackerrank.com/certificates/3cf5ac6ef88d"
+                    >"View"</a
+                  >
+                </li>
+                <li>
+                  React -
+                  <a
+                    target="_blank"
+                    style="cursor: pointer"
+                    href="https://www.hackerrank.com/certificates/4257671e81e0"
+                    >"View"</a
+                  >
+                </li>
+                <li>
+                  Javascript Advanced -
+                  <a
+                    target="_blank"
+                    style="cursor: pointer"
+                    href="https://cutshort.io/certificate/70155"
+                    >"View"</a
+                  >
+                </li>
               </ul>
             </div>
           </div>
@@ -492,7 +538,9 @@
           >
             <div class="section">
               <div class="header">
-                <h1>Amith Moorkoth</h1>
+                <a href="https://amith-moorkoth.github.io/">
+                  <h1>Amith Moorkoth</h1></a
+                >
                 <p style="margin-left: -236px">Software Engineer</p>
                 <div class="row justify-content-center">
                   <div class="col-md-12">
@@ -514,30 +562,34 @@
                         </div>
                         <div class="col-md-4 info-item">
                           <div>
-                            <i
-                              class="fas fa-phone info-icon"
-                              style="
-                                width: 25px;
-                                height: 25px;
-                                font-size: 14px !important;
-                                padding: 5px !important;
-                              "
-                            ></i>
-                            <div>8891025267</div>
+                            <a href="tel:+918891025267">
+                              <i
+                                class="fas fa-phone info-icon"
+                                style="
+                                  width: 25px;
+                                  height: 25px;
+                                  font-size: 14px !important;
+                                  padding: 5px !important;
+                                "
+                              ></i>
+                              <div>8891025267</div>
+                            </a>
                           </div>
                         </div>
                         <div class="col-md-4 info-item">
                           <div>
-                            <i
-                              class="fas fa-envelope info-icon"
-                              style="
-                                width: 25px;
-                                height: 25px;
-                                font-size: 14px !important;
-                                padding: 5px !important;
-                              "
-                            ></i>
-                            <div>m.amitkan@gmail.com</div>
+                            <a href="mailto:m.amitkan@gmail.com">
+                              <i
+                                class="fas fa-envelope info-icon"
+                                style="
+                                  width: 25px;
+                                  height: 25px;
+                                  font-size: 14px !important;
+                                  padding: 5px !important;
+                                "
+                              ></i>
+                              <div>m.amitkan@gmail.com</div>
+                            </a>
                           </div>
                         </div>
                       </div>
@@ -546,7 +598,13 @@
                           class="fa fa-map-marker-alt location-icon"
                           aria-hidden="true"
                         ></i>
-                        <p class="location-text">Bangalore, India</p>
+                        <p class="location-text">
+                          <a
+                            href="https://www.google.com/maps?q=Bangalore,+India"
+                            target="_blank"
+                            >Bangalore, India</a
+                          >
+                        </p>
                       </div>
                       <div class="quote-box">
                         <p style="font-size: unset">
@@ -635,10 +693,6 @@
                         Worked with CI/CD pipelines using Jenkins, Docker, and
                         Kubernetes for seamless deployment and scaling.
                       </li>
-                      <li>
-                        Participated in Agile/Scrum ceremonies and contributed
-                        to sprint planning and retrospectives.
-                      </li>
                     </ul>
                   </div>
                 </div>
@@ -696,9 +750,11 @@
                     <h3 style="font-size: x-large">
                       Bombie - Drag and Drop UI Builder
                     </h3>
-                    <p>April 2022 - Present(not active)</p>
+                    <p>April 2022 - Present</p>
                     <p>
-                      <a href="https://github.com/amith-moorkoth/bombie"
+                      <a
+                        href="https://github.com/amith-moorkoth/bombie"
+                        target="_blank"
                         >https://github.com/amith-moorkoth/bombie</a
                       >
                     </p>
