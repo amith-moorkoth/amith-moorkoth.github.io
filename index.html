@@ -1,542 +1,518 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+
+<head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Resume - Amith Moorkoth</title>
     <!-- Bootstrap CSS -->
 
     <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-2HYC3KGL7F"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-2HYC3KGL7F"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
 
-  gtag('config', 'G-2HYC3KGL7F');
-</script>
-    <link
-      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
-      rel="stylesheet"
-    />
+        gtag('config', 'G-2HYC3KGL7F');
+    </script>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet" />
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-    />
-    <link
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
-      rel="stylesheet"
-    />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet" />
     <!-- Custom CSS -->
     <style>
-      @page {
-      }
-      body {
-        font-family: Arial, Helvetica, sans-serif;
-        line-height: 1.6;
-        background-color: white;
-        color: #333;
-        transform: scaleX(1.13674);
-        font-weight: 400; /* Use appropriate font weight */
-      }
-      .container {
-        max-width: 900px;
-        margin: 20px auto;
-        background-color: #f3f5fa;
-        padding: 30px;
-        box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
-        border-radius: 8px;
-      }
-      .header {
-        text-align: center;
-      }
-      .header h1 {
-        margin: 0;
-        padding: 0;
-        font-size: 2.7em;
-        color: #000;
-        letter-spacing: 1px;
-        margin-left: -93px;
-      }
-      .header p {
-        font-size: 19px;
-        color: #303953;
-        font-weight: 700;
-        margin-left: 5px;
-      }
-      .header .contact-info {
-        margin-top: 15px;
-      }
-      .header .contact-info p {
-        margin: 5px 0;
-        font-size: 0.9em;
-      }
-      .section-title {
-        margin-bottom: 20px;
-        margin-left: 35px;
-        font-size: 25px;
-        color: #000;
-        border-bottom: 2px solid #000;
-        padding-bottom: 5px;
-      }
+        @page {}
 
-      .skills-list,
-      .experience-list {
-        list-style-type: none;
-        padding: 0;
-      }
-      .skills-list li,
-      .experience-list li {
-        margin: 10px 0;
-      }
-      .skills-list {
-        display: flex;
-        flex-wrap: wrap;
-      }
-      .skills-list li {
-        background-color: black;
-        color: white;
-        padding: 8px 15px;
-        border-radius: 20px;
-        margin-left: 4px;
-        margin-bottom: 0px;
-        font-size: 13px;
-        transition: all 0.3s ease;
-      }
-      .skills-list.newcss li {
-        padding: 8px 6px !important;
-      }
-      .skills-list li:hover {
-        background-color: #2980b9;
-        transform: translateY(-3px);
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-      }
-      a {
-        color: #000;
-        text-decoration: none;
-        transition: color 0.3s ease;
-      }
-      a:hover {
-        color: #555;
-      }
-      .section {
-        margin-bottom: 30px;
-      }
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            line-height: 1.6;
+            background-color: white;
+            color: #333;
+            transform: scaleX(1.13674);
+            font-weight: 400;
+            /* Use appropriate font weight */
+        }
 
-      .section a {
-        position: relative;
-        text-decoration: none;
-      }
+        .container {
+            max-width: 900px;
+            margin: 20px auto;
+            background-color: #f3f5fa;
+            padding: 30px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+        }
 
-      .section a::after {
-        content: "";
-        position: absolute;
-        width: 100%;
-        height: 1px;
-        bottom: 0;
-        left: 0;
-        background-color: #000;
-        transform: scaleX(0);
-        transform-origin: bottom right;
-        transition: transform 0.3s ease;
-      }
+        .header {
+            text-align: center;
+        }
 
-      .section a:hover::after {
-        transform: scaleX(1);
-        transform-origin: bottom left;
-      }
+        .header h1 {
+            margin: 0;
+            padding: 0;
+            font-size: 2.7em;
+            color: #000;
+            letter-spacing: 1px;
+            margin-left: -93px;
+        }
 
-      .experience-list li {
-        margin-bottom: 15px;
-      }
-      h3 {
-        color: #000000;
-        margin-bottom: 5px;
-      }
-      .profile-pic img {
-        border-radius: 100%;
-        height: 180px;
-        box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
-      }
-      .profile-pic:hover {
-        transform: scale(1.05);
-      }
-      .icon-ini {
-        background: black;
-        color: white;
-        border-radius: 100%;
-        font-size: 18px !important;
-        padding: 10px;
-        padding-left: 12px;
-        float: left;
-        width: 38px;
-        height: 38px;
-        margin-top: 2px;
-        margin-left: -8px;
-      }
+        .header p {
+            font-size: 19px;
+            color: #303953;
+            font-weight: 700;
+            margin-left: 5px;
+        }
 
-      .info-row {
-        /* border-bottom: 1px solid #e9ecef; */
-        /* padding-bottom: 15px; */
-        margin-bottom: 15px;
-      }
-      .info-item {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        text-align: center;
-      }
-      .info-item:hover .info-icon {
-        transform: rotate(360deg);
-      }
-      .info-icon {
-        background: black;
-        color: white;
-        border-radius: 100%;
-        font-size: 18px !important;
-        padding: 10px;
-        width: 38px;
-        height: 38px;
+        .header .contact-info {
+            margin-top: 15px;
+        }
 
-        transition: transform 0.3s ease;
-      }
-      .quote-box {
-        background-color: #ecf0f1;
-        border-left: 5px solid black;
-        padding: 20px;
-        margin-top: 30px;
-        box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
-        padding-left: 12px;
-        padding-right: 12px;
-        transition: background-color 0.3s ease;
-      }
-      .quote-box:hover {
-        background-color: #d6e0e8;
-      }
-      .quote-text {
-        font-size: 1.2rem;
-        color: #2c3e50;
-      }
-      .achievement-text {
-        font-size: 0.9rem;
-      }
-      .location-row {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        margin-top: 15px;
-        background: #f1f3f5;
-      }
-      .location-icon {
-        font-size: 20px;
-        color: black;
-        margin-right: 0px;
-      }
-      .location-text {
-        font-size: 15px !important;
-        margin: 0;
-      }
+        .header .contact-info p {
+            margin: 5px 0;
+            font-size: 0.9em;
+        }
 
-      .timeline {
-        position: relative;
-        /* padding-left: 50px; */
-        margin-top: 20px;
-      }
+        .section-title {
+            margin-bottom: 20px;
+            margin-left: 35px;
+            font-size: 25px;
+            color: #000;
+            border-bottom: 2px solid #000;
+            padding-bottom: 5px;
+        }
 
-      .timeline::before {
-        /*content: "";
+        .skills-list,
+        .experience-list {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .skills-list li,
+        .experience-list li {
+            margin: 10px 0;
+        }
+
+        .skills-list {
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        .skills-list li {
+            background-color: black;
+            color: white;
+            padding: 8px 15px;
+            border-radius: 20px;
+            margin-left: 4px;
+            margin-bottom: 0px;
+            font-size: 13px;
+            transition: all 0.3s ease;
+        }
+
+        .skills-list.newcss li {
+            padding: 8px 6px !important;
+        }
+
+        .skills-list li:hover {
+            background-color: #2980b9;
+            transform: translateY(-3px);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        a {
+            color: #000;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        a:hover {
+            color: #555;
+        }
+
+        .section {
+            margin-bottom: 30px;
+        }
+
+        .section a {
+            position: relative;
+            text-decoration: none;
+        }
+
+        .section a::after {
+            content: "";
+            position: absolute;
+            width: 100%;
+            height: 1px;
+            bottom: 0;
+            left: 0;
+            background-color: #000;
+            transform: scaleX(0);
+            transform-origin: bottom right;
+            transition: transform 0.3s ease;
+        }
+
+        .section a:hover::after {
+            transform: scaleX(1);
+            transform-origin: bottom left;
+        }
+
+        .experience-list li {
+            margin-bottom: 15px;
+        }
+
+        h3 {
+            color: #000000;
+            margin-bottom: 5px;
+        }
+
+        .profile-pic img {
+            border-radius: 100%;
+            height: 180px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+        }
+
+        .profile-pic:hover {
+            transform: scale(1.05);
+        }
+
+        .icon-ini {
+            background: black;
+            color: white;
+            border-radius: 100%;
+            font-size: 18px !important;
+            padding: 10px;
+            padding-left: 12px;
+            float: left;
+            width: 38px;
+            height: 38px;
+            margin-top: 2px;
+            margin-left: -8px;
+        }
+
+        .info-row {
+            /* border-bottom: 1px solid #e9ecef; */
+            /* padding-bottom: 15px; */
+            margin-bottom: 15px;
+        }
+
+        .info-item {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+        }
+
+        .info-item:hover .info-icon {
+            transform: rotate(360deg);
+        }
+
+        .info-icon {
+            background: black;
+            color: white;
+            border-radius: 100%;
+            font-size: 18px !important;
+            padding: 10px;
+            width: 38px;
+            height: 38px;
+
+            transition: transform 0.3s ease;
+        }
+
+        .quote-box {
+            background-color: #ecf0f1;
+            border-left: 5px solid black;
+            padding: 20px;
+            margin-top: 30px;
+            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+            padding-left: 12px;
+            padding-right: 12px;
+            transition: background-color 0.3s ease;
+        }
+
+        .quote-box:hover {
+            background-color: #d6e0e8;
+        }
+
+        .quote-text {
+            font-size: 1.2rem;
+            color: #2c3e50;
+        }
+
+        .achievement-text {
+            font-size: 0.9rem;
+        }
+
+        .location-row {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-top: 15px;
+            background: #f1f3f5;
+        }
+
+        .location-icon {
+            font-size: 20px;
+            color: black;
+            margin-right: 0px;
+        }
+
+        .location-text {
+            font-size: 15px !important;
+            margin: 0;
+        }
+
+        .timeline {
+            position: relative;
+            /* padding-left: 50px; */
+            margin-top: 20px;
+        }
+
+        .timeline::before {
+            /*content: "";
         position: absolute;
         left: 20px;
         top: 0;
         width: 2px;
         height: 100%;
         background-color: black;*/
-      }
+        }
 
-      .timeline-item {
-        position: relative;
-        margin-bottom: 30px;
-        transform: translateY(20px);
-        transition: opacity 0.5s ease, transform 0.5s ease;
-      }
+        .timeline-item {
+            position: relative;
+            margin-bottom: 30px;
+            transform: translateY(20px);
+            transition: opacity 0.5s ease, transform 0.5s ease;
+        }
 
-      .timeline-item:hover {
-        transform: translateY(0);
-      }
+        .timeline-item:hover {
+            transform: translateY(0);
+        }
 
-      .timeline-icon {
-        position: absolute;
-        left: -50px;
-        top: 0;
-        width: 40px;
-        height: 40px;
-        background-color: black;
-        border-radius: 50%;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        color: white;
-        font-size: 20px;
-        box-shadow: 0 0 0 4px #fff, inset 0 2px 0 rgba(0, 0, 0, 0.08),
-          0 3px 0 4px rgba(0, 0, 0, 0.05);
-      }
+        .timeline-icon {
+            position: absolute;
+            left: -50px;
+            top: 0;
+            width: 40px;
+            height: 40px;
+            background-color: black;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 20px;
+            box-shadow: 0 0 0 4px #fff, inset 0 2px 0 rgba(0, 0, 0, 0.08),
+                0 3px 0 4px rgba(0, 0, 0, 0.05);
+        }
 
-      .timeline-content {
-        background-color: #f8f9fa;
-        padding: 20px;
-        border-radius: 5px;
-        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-      }
+        .timeline-content {
+            background-color: #f8f9fa;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
 
-      .timeline-content h3 {
-        margin-top: 0;
-        color: #2c3e50;
-      }
+        .timeline-content h3 {
+            margin-top: 0;
+            color: #2c3e50;
+        }
 
-      .timeline-content h4 {
-        color: black;
-        margin-bottom: 5px;
-      }
+        .timeline-content h4 {
+            color: black;
+            margin-bottom: 5px;
+        }
 
-      .timeline-date {
-        font-style: italic;
-        color: #7f8c8d;
-        margin-bottom: 15px;
-      }
+        .timeline-date {
+            font-style: italic;
+            color: #7f8c8d;
+            margin-bottom: 15px;
+        }
 
-      .experience-list {
-        padding-left: 20px;
-      }
+        .experience-list {
+            padding-left: 20px;
+        }
 
-      .experience-list li {
-        margin-bottom: 10px;
-      }
+        .experience-list li {
+            margin-bottom: 10px;
+        }
 
-      .experience-list li::before {
-        font-family: "Font Awesome 6 Free";
-        content: "\f005"; /* Unicode for the briefcase icon */
-      }
+        .experience-list li::before {
+            font-family: "Font Awesome 6 Free";
+            content: "\f005";
+            /* Unicode for the briefcase icon */
+        }
     </style>
-    <link
-      rel="stylesheet"
-      href="/font-awesome-4.7.0/css/font-awesome.min.css"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
-    />
-  </head>
-  <body>
+    <link rel="stylesheet" href="/font-awesome-4.7.0/css/font-awesome.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+</head>
+
+<body>
     <div class="container">
-      <div class="row">
-        <div class="col-md-5 col-md-offset-2">
-          <div class="row">
-            <div class="section">
-              <div style="margin-top: 75px">
-                <div
-                  style="
+        <div class="row">
+            <div class="col-md-5 col-md-offset-2">
+                <div class="row">
+                    <div class="section">
+                        <div style="margin-top: 75px">
+                            <div style="
                     background: white;
                     width: 787px;
                     border-radius: 35px 0px 0px 35px;
                     padding-left: 95px;
                     padding-top: 20px;
                     padding-bottom: 20px;
-                  "
-                >
-                  <div
-                    style="
+                  ">
+                                <div style="
                       border-left: 4px solid black;
                       border-radius: 100%;
                       padding: 11px;
                       display: table;
-                    "
-                  >
-                    <div
-                      style="
+                    ">
+                                    <div style="
                         border-left: 2px solid black;
                         border-radius: 100%;
                         padding: 11px;
-                      "
-                    >
-                      <div
-                        class="profile-pic"
-                        style="
+                      ">
+                                        <div class="profile-pic" style="
                           background: url(/pic.jpg);
                           height: 190px;
                           width: 160px;
                           background-size: cover;
                           border-radius: 100%;
                           background-position: center;
-                        "
-                      >
-                        <img
-                          src="/pic.jpg"
-                          alt="Profile Picture"
-                          style="display: none"
-                        />
-                      </div>
+                        ">
+                                            <img src="/pic.jpg" alt="Profile Picture" style="display: none" />
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                  </div>
+
+                    <div class="section">
+                        <i class="fa fa-cogs icon-ini" aria-hidden="true"></i>
+                        <h2 class="section-title" style="margin-right: 125px">
+                            Technical Skills
+                        </h2>
+                        <ul class="skills-list">
+                            <li>React.js</li>
+                            <li>JavaScript(ES6)</li>
+                            <li>SQL</li>
+                            <li>JQuery</li>
+                            <li>HTML</li>
+                            <li>CSS</li>
+                            <li>Redux</li>
+                            <li>Bootstrap</li>
+                            <li>Ajax</li>
+                            <li>GIT</li>
+                            <li>Npm</li>
+                            <li>Bitbucket</li>
+                            <li>Postman</li>
+                            <li>Webpack</li>
+                            <li>Babel</li>
+                            <li>Node.js</li>
+                            <li>React Hooks</li>
+                            <li>Context API</li>
+                            <li>Code Review</li>
+                            <li>CI/CD (Jenkins)</li>
+                            <li>JIRA</li>
+                            <li>CSS</li>
+                        </ul>
+                    </div>
+
+                    <div class="section">
+                        <i class="fa fa-star icon-ini" aria-hidden="true" style="padding-left: 9px"></i>
+                        <h2 class="section-title" style="margin-right: 70px">
+                            Core Competencies
+                        </h2>
+                        <ul class="skills-list newcss">
+                            <li>Front-End Architecture</li>
+                            <li>UI/UX Development</li>
+                            <li>Responsive Web Design</li>
+                            <li>Single Page Applications (SPA)</li>
+                            <li>State Management</li>
+                            <li>Asynchronous Programming</li>
+                            <li>Component-Based Development</li>
+                            <li>Web Performance Optimization</li>
+                            <li>Cross-Browser Compatibility</li>
+                            <li>Mobile-First Development</li>
+                            <li>RESTful API Integration</li>
+                            <li>Git Version Control</li>
+                            <li>Agile/Scrum Methodologies</li>
+                            <li>Test-Driven Development (TDD)</li>
+                            <li>Code Review</li>
+                            <li>Debugging Tools (Chrome DevTools)</li>
+                            <li>Progressive Web Apps (PWA)</li>
+                            <li>Client-Side Security(authentication and authorization)</li>
+                            <li>Technical Documentation</li>
+                            <li>Scalable Code Architecture</li>
+                            <li>Browser Developer Tools</li>
+                            <li>Code Optimization</li>
+                        </ul>
+                    </div>
+
+                    <div class="section" style="page-break-before: always; margin-top: 50px">
+                        <i class="fa fa-info-circle icon-ini" aria-hidden="true"></i>
+                        <h2 class="section-title">Personal Information</h2>
+                        <table>
+                            <tbody>
+                                <tr>
+                                    <td style="min-width: 130px">Date of Birth:</td>
+                                    <td><strong>18-Jul-1992</strong></td>
+                                </tr>
+                                <tr>
+                                    <td>Gender:</td>
+                                    <td><strong>Male</strong></td>
+                                </tr>
+                                <tr>
+                                    <td>Country:</td>
+                                    <td><strong>India</strong></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <div class="section">
+                        <i class="fa fa-graduation-cap icon-ini" aria-hidden="true" style="padding-left: 9px"></i>
+                        <h2 class="section-title" style="margin-right: 170px">
+                            Education
+                        </h2>
+                        <ul class="experience-list">
+                            <li>
+                                B.Tech Information Technology, Government Engineering College
+                                - Barton Hill Tvm, 2017
+                            </li>
+                            <li>Nttf Diploma in IT, 2013</li>
+                            <li>12th, CBSE, English, 2010</li>
+                            <li>10th, CBSE, English, 2008</li>
+                        </ul>
+                    </div>
+
+                    <div class="section">
+                        <i class="fa fa-graduation-cap icon-ini" aria-hidden="true" style="padding-left: 9px"></i>
+                        <h2 class="section-title" style="margin-right: 170px">
+                            Certificates
+                        </h2>
+                        <ul class="experience-list">
+                            <li>
+                                Javascript Intermediate -
+                                <a target="_blank" style="cursor: pointer"
+                                    href="https://www.hackerrank.com/certificates/3cf5ac6ef88d">"View"</a>
+                            </li>
+                            <li>
+                                React -
+                                <a target="_blank" style="cursor: pointer"
+                                    href="https://www.hackerrank.com/certificates/4257671e81e0">"View"</a>
+                            </li>
+                            <li>
+                                Javascript Advanced -
+                                <a target="_blank" style="cursor: pointer"
+                                    href="https://cutshort.io/certificate/70155">"View"</a>
+                            </li>
+                        </ul>
+                    </div>
                 </div>
-              </div>
             </div>
-
-            <div class="section">
-              <i class="fa fa-cogs icon-ini" aria-hidden="true"></i>
-              <h2 class="section-title" style="margin-right: 125px">
-                Technical Skills
-              </h2>
-              <ul class="skills-list">
-                <li>React.js</li>
-                <li>JavaScript(ES6)</li>
-                <li>SQL</li>
-                <li>JQuery</li>
-                <li>HTML</li>
-                <li>CSS</li>
-                <li>Redux</li>
-                <li>Bootstrap</li>
-                <li>Ajax</li>
-                <li>GIT</li>
-                <li>Npm</li>
-                <li>Bitbucket</li>
-                <li>Postman</li>
-                <li>Webpack</li>
-                <li>Babel</li>
-                <li>Node.js</li>
-                <li>React Hooks</li>
-                <li>Context API</li>
-                <li>Code Review</li>
-                <li>CI/CD (Jenkins)</li>
-                <li>JIRA</li>
-                <li>CSS</li>
-              </ul>
-            </div>
-
-            <div class="section">
-              <i
-                class="fa fa-star icon-ini"
-                aria-hidden="true"
-                style="padding-left: 9px"
-              ></i>
-              <h2 class="section-title" style="margin-right: 70px">
-                Core Competencies
-              </h2>
-              <ul class="skills-list newcss">
-                <li>Front-End Architecture</li>
-                <li>UI/UX Development</li>
-                <li>Responsive Web Design</li>
-                <li>Single Page Applications (SPA)</li>
-                <li>State Management</li>
-                <li>Asynchronous Programming</li>
-                <li>Component-Based Development</li>
-                <li>Web Performance Optimization</li>
-                <li>Cross-Browser Compatibility</li>
-                <li>Mobile-First Development</li>
-                <li>RESTful API Integration</li>
-                <li>Git Version Control</li>
-                <li>Agile/Scrum Methodologies</li>
-                <li>Test-Driven Development (TDD)</li>
-                <li>Code Review</li>
-                <li>Debugging Tools (Chrome DevTools)</li>
-                <li>Progressive Web Apps (PWA)</li>
-                <li>Client-Side Security(authentication and authorization)</li>
-                <li>Technical Documentation</li>
-                <li>Scalable Code Architecture</li>
-                <li>Browser Developer Tools</li>
-                <li>Code Optimization</li>
-              </ul>
-            </div>
-
-            <div
-              class="section"
-              style="page-break-before: always; margin-top: 50px"
-            >
-              <i class="fa fa-info-circle icon-ini" aria-hidden="true"></i>
-              <h2 class="section-title">Personal Information</h2>
-              <table>
-                <tbody>
-                  <tr>
-                    <td style="min-width: 130px">Date of Birth:</td>
-                    <td><strong>18-Jul-1992</strong></td>
-                  </tr>
-                  <tr>
-                    <td>Gender:</td>
-                    <td><strong>Male</strong></td>
-                  </tr>
-                  <tr>
-                    <td>Country:</td>
-                    <td><strong>India</strong></td>
-                  </tr>
-                </tbody>
-              </table>
-            </div>
-
-            <div class="section">
-              <i
-                class="fa fa-graduation-cap icon-ini"
-                aria-hidden="true"
-                style="padding-left: 9px"
-              ></i>
-              <h2 class="section-title" style="margin-right: 170px">
-                Education
-              </h2>
-              <ul class="experience-list">
-                <li>
-                  B.Tech Information Technology, Government Engineering College
-                  - Barton Hill Tvm, 2017
-                </li>
-                <li>Nttf Diploma in IT, 2013</li>
-                <li>12th, CBSE, English, 2010</li>
-                <li>10th, CBSE, English, 2008</li>
-              </ul>
-            </div>
-
-            <div class="section">
-              <i
-                class="fa fa-graduation-cap icon-ini"
-                aria-hidden="true"
-                style="padding-left: 9px"
-              ></i>
-              <h2 class="section-title" style="margin-right: 170px">
-                Certificates
-              </h2>
-              <ul class="experience-list">
-                <li>
-                  Javascript Intermediate -
-                  <a
-                    target="_blank"
-                    style="cursor: pointer"
-                    href="https://www.hackerrank.com/certificates/3cf5ac6ef88d"
-                    >"View"</a
-                  >
-                </li>
-                <li>
-                  React -
-                  <a
-                    target="_blank"
-                    style="cursor: pointer"
-                    href="https://www.hackerrank.com/certificates/4257671e81e0"
-                    >"View"</a
-                  >
-                </li>
-                <li>
-                  Javascript Advanced -
-                  <a
-                    target="_blank"
-                    style="cursor: pointer"
-                    href="https://cutshort.io/certificate/70155"
-                    >"View"</a
-                  >
-                </li>
-              </ul>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-7">
-          <div
-            class="row"
-            style="
+            <div class="col-md-7">
+                <div class="row" style="
               background: white;
               padding: 20px;
               border-radius: 74px 0px 0px 36px;
@@ -544,278 +520,349 @@
               padding-top: 46px;
               margin-right: -28px;
               margin-bottom: -24px;
-            "
-          >
-            <div class="section">
-              <div class="header">
-                <a href="https://amith-moorkoth.github.io/">
-                  <h1>Amith Moorkoth</h1></a
-                >
-                <p style="margin-left: -236px">Software Engineer</p>
-                <div class="row justify-content-center">
-                  <div class="col-md-12">
-                    <div class="profile-card">
-                      <div class="row info-row">
-                        <div class="col-md-4 info-item">
-                          <div>
-                            <i
-                              class="fas fa-briefcase info-icon"
-                              style="
+            ">
+                    <div class="section">
+                        <div class="header">
+                            <a href="https://amith-moorkoth.github.io/">
+                                <h1>Amith Moorkoth</h1>
+                            </a>
+                            <p style="margin-left: -236px">Sr.Software Engineer</p>
+                            <div class="row justify-content-center">
+                                <div class="col-md-12">
+                                    <div class="profile-card">
+                                        <div class="row info-row">
+                                            <div class="col-md-4 info-item">
+                                                <div>
+                                                    <i class="fas fa-briefcase info-icon" style="
                                 width: 25px;
                                 height: 25px;
                                 font-size: 14px !important;
                                 padding: 5px !important;
-                              "
-                            ></i>
-                            <div>6 Years 3 Months</div>
-                          </div>
-                        </div>
-                        <div class="col-md-4 info-item">
-                          <div>
-                            <a href="tel:+918891025267">
-                              <i
-                                class="fas fa-phone info-icon"
-                                style="
+                              "></i>
+                                                    <div>7 Years</div>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-4 info-item">
+                                                <div>
+                                                    <a href="tel:+918891025267">
+                                                        <i class="fas fa-phone info-icon" style="
                                   width: 25px;
                                   height: 25px;
                                   font-size: 14px !important;
                                   padding: 5px !important;
-                                "
-                              ></i>
-                              <div>8891025267</div>
-                            </a>
-                          </div>
-                        </div>
-                        <div class="col-md-4 info-item">
-                          <div>
-                            <a href="mailto:m.amitkan@gmail.com">
-                              <i
-                                class="fas fa-envelope info-icon"
-                                style="
+                                "></i>
+                                                        <div>8891025267</div>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-4 info-item">
+                                                <div>
+                                                    <a href="mailto:m.amitkan@gmail.com">
+                                                        <i class="fas fa-envelope info-icon" style="
                                   width: 25px;
                                   height: 25px;
                                   font-size: 14px !important;
                                   padding: 5px !important;
-                                "
-                              ></i>
-                              <div>m.amitkan@gmail.com</div>
-                            </a>
-                          </div>
+                                "></i>
+                                                        <div>m.amitkan@gmail.com</div>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="location-row">
+                                            <i class="fa fa-map-marker-alt location-icon" aria-hidden="true"></i>
+                                            <p class="location-text">
+                                                <a href="https://www.google.com/maps?q=Bangalore,+India"
+                                                    target="_blank">Bangalore, India</a>
+                                            </p>
+                                        </div>
+                                        <div class="quote-box">
+                                            <p style="font-size: unset">
+                                                Front End Developer with Expertise in React JS & ES6.
+                                            </p>
+                                            <p style="font-size: unset; font-weight: unset">
+                                                Achievement-driven professional, targeting senior
+                                                level assignments with an organization of high repute
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
-                      </div>
-                      <div class="location-row">
-                        <i
-                          class="fa fa-map-marker-alt location-icon"
-                          aria-hidden="true"
-                        ></i>
-                        <p class="location-text">
-                          <a
-                            href="https://www.google.com/maps?q=Bangalore,+India"
-                            target="_blank"
-                            >Bangalore, India</a
-                          >
-                        </p>
-                      </div>
-                      <div class="quote-box">
-                        <p style="font-size: unset">
-                          Front End Developer with Expertise in React JS & ES6.
-                        </p>
-                        <p style="font-size: unset; font-weight: unset">
-                          Achievement-driven professional, targeting senior
-                          level assignments with an organization of high repute
-                        </p>
-                      </div>
                     </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="section">
-              <i
-                class="fa fa-user icon-ini"
-                aria-hidden="true"
-                style="padding-left: 12px"
-              ></i>
-              <h2 class="section-title" style="margin-right: 216px">
-                Profile Summary
-              </h2>
-              <p>
-                Results-driven Front End Developer with over 6+ years of
-                experience in building dynamic and responsive web applications
-                using React JS, ES6, and modern JavaScript frameworks. Expert in
-                state management with Redux, context API, and Hooks. Proficient
-                in HTML5, CSS3. Strong experience in RESTful API integration,
-                asynchronous programming, and optimizing front-end performance.
-                Skilled in version control systems like Git and CI/CD pipelines
-                with Jenkins. Familiar with TypeScript, Webpack, Babel, and
-                modern front-end tooling. Committed to writing clean,
-                maintainable code and following best practices in Agile
-                environments. Seeking to leverage my expertise in a challenging
-                role that pushes the boundaries of web development.
-              </p>
-            </div>
-
-            <div class="section">
-              <i class="fa fa-briefcase icon-ini" aria-hidden="true"></i>
-              <h2 class="section-title" style="margin-right: 216px">
-                Work Experience
-              </h2>
-              <div class="timeline">
-                <div class="timeline-item">
-                  <div class="timeline-content">
-                    <h3>Software Engineer</h3>
-                    <h4>Grasko Solutions</h4>
-                    <p class="timeline-date">April 2018 - Present</p>
-                    <ul class="experience-list">
-  <li>
-    Developed and maintained complex web applications using
-    React.js, JSX, Virtual DOM and React.js Component Lifecycle methods for efficient UI development.
-  </li>
-  <li>
-    Implemented state management using Redux and Context API.
-  </li>
-  <li>
-    Optimized application performance through code-splitting and lazy loading.
-  </li>
-  <li>
-    Utilized React.js Hooks for cleaner and more efficient code.
-  </li>
-  <li>
-    Integrated RESTful APIs for data fetching and manipulation.
-  </li>
-  <li>
-    Ensured cross-browser compatibility and responsiveness through CSS-in-JS libraries and styled-components.
-  </li>
-  <li>
-    Collaborated with backend developers to design and implement microservices architecture.
-  </li>
-  <li>
-    Led code reviews and mentored junior developers on best practices and coding standards.
-  </li>
-  <li>
-    Worked with CI/CD pipelines using Jenkins, Docker, and Kubernetes for seamless deployment and scaling.
-  </li>
-  <li>
-    Node.js API Development: Developed RESTful APIs using Express.js, implementing robust backend services with Node.js Event Loop, Node.js Middleware, and Node.js NPM for efficient application support.
-  </li>
-</ul>
-
-                  </div>
-                </div>
-                <!-- Add more timeline-item divs as needed -->
-              </div>
-            </div>
-
-            <div class="section">
-              <i class="fa fa-folder-open icon-ini" aria-hidden="true"></i>
-              <h2 class="section-title" style="margin-right: 326px">
-                Projects
-              </h2>
-
-              <div class="timeline">
-                <div class="timeline-item">
-                  <div class="timeline-content">
-  <h3 style="font-size: x-large">
-    CDA - Care Delivery App (Grasko Solutions)
-  </h3>
-  <p>Feb 2020 - Present</p>
-  <p>
-    CDA is a JSON-based component rendering platform designed for creating forms with existing components. It features a custom Redux handler for state management, which automatically saves component data to MongoDB on every change. This auto-saving functionality is debounced to prevent excessive updates. The primary goal of the CDA project is to simplify the creation of forms using existing components within the system, utilizing React.js for the frontend and Node.js for the backend.
-  </p>
-
-  <ol>
-    <li>
-      <p>Developed the backend API using Node.js and Express.js for efficient data handling and integration with MongoDB, employing Node.js Event Loop and Middleware for optimized performance.</p>
-    </li>
-    <li>
-      <p>JSON-based component rendering platform utilizing React.js for dynamic and reusable UI components.</p>
-    </li>
-    <li>
-      <p>Custom Redux handler for state management in React.js applications, ensuring smooth state transitions and data flow.</p>
-    </li>
-    <li>
-      <p>Automatic saving of component data to MongoDB with debouncing to minimize excessive updates, leveraging Node.js asynchronous programming.</p>
-    </li>
-    <li>
-      <p>Simplified form creation using existing React.js components and Node.js backend services for seamless integration.</p>
-    </li>
-  </ol>
-</div>
-
-                </div>
-                <div class="timeline-item">
-                  <div class="timeline-content">
-                    <h3 style="font-size: x-large">
-                      Bombie - Drag and Drop UI Builder
-                    </h3>
-                    <p>April 2022 - Present</p>
-                    <p>
-                      <a
-                        href="https://github.com/amith-moorkoth/bombie"
-                        target="_blank"
-                        >https://github.com/amith-moorkoth/bombie</a
-                      >
-                    </p>
-                    <p>
-                      Bombie is a drag-and-drop builder for Material-UI
-                      components in React, designed to streamline the creation
-                      of React components through an intuitive interface. This
-                      tool allows users to visually assemble Material-UI
-                      components and generate corresponding React code,
-                      significantly simplifying the development process.
-                    </p>
-
-                    <ol>
-                      <li>
+                    <div class="section">
+                        <i class="fa fa-user icon-ini" aria-hidden="true" style="padding-left: 12px"></i>
+                        <h2 class="section-title" style="margin-right: 216px">
+                            Profile Summary
+                        </h2>
                         <p>
-                          <strong>Drag-and-Drop Interface</strong>: This feature
-                          allows you to easily arrange and organize components
-                          by dragging and dropping them. It’s a convenient way
-                          to create complex UI layouts without writing extensive
-                          code manually.
+                            Results-driven Front End Developer with over 6+ years of
+                            experience in building dynamic and responsive web applications
+                            using React JS, ES6, and modern JavaScript frameworks. Expert in
+                            state management with Redux, context API, and Hooks. Proficient
+                            in HTML5, CSS3. Strong experience in RESTful API integration,
+                            asynchronous programming, and optimizing front-end performance.
+                            Skilled in version control systems like Git and CI/CD pipelines
+                            with Jenkins. Familiar with TypeScript, Webpack, Babel, and
+                            modern front-end tooling. Committed to writing clean,
+                            maintainable code and following best practices in Agile
+                            environments. Seeking to leverage my expertise in a challenging
+                            role that pushes the boundaries of web development.
                         </p>
-                      </li>
-                      <li>
-                        <p>
-                          <strong>Code Generation</strong>: Material-UI’s
-                          automatic code generation is a time-saving feature. As
-                          you design your UI visually, it generates React
-                          component code for you. This ensures consistency and
-                          reduces the chances of errors.
-                        </p>
-                      </li>
-                      <li>
-                        <p>
-                          <strong>Component Customization</strong>: Being able
-                          to customize Material-UI components directly within
-                          the interface is fantastic. You can tweak properties
-                          like colors, typography, and spacing to match your
-                          specific design requirements.
-                        </p>
-                      </li>
-                      <li>
-                        <p>
-                          <strong>Real-time Preview</strong>: The real-time
-                          preview feature is invaluable. As you make changes to
-                          components, you can instantly see how they’ll appear
-                          in the final UI. This helps you iterate quickly and
-                          make informed design decisions.
-                        </p>
-                      </li>
-                    </ol>
-                  </div>
+                    </div>
+
+                    <div class="section">
+                        <i class="fa fa-briefcase icon-ini" aria-hidden="true"></i>
+                        <h2 class="section-title" style="margin-right: 216px">
+                            Work Experience
+                        </h2>
+                        <div class="timeline">
+                            <div class="timeline-item">
+                                <div class="timeline-content">
+                                    <h3>Sr. Associate – Projects</h3>
+                                    <h4>Cognizant (Client: JPMorgan Chase)</h4>
+                                    <p class="timeline-date">September 2024 – Present</p>
+                                    <ul class="experience-list">
+                                        <li>
+                                            Developed internal banking tools using <strong>React.js</strong>, enhancing
+                                            performance and maintainability.
+                                        </li>
+                                        <li>
+                                            Integrated REST APIs for seamless communication between front-end and
+                                            back-end
+                                            systems.
+                                        </li>
+                                        <li>
+                                            Collaborated with design and backend teams to ensure responsive and
+                                            accessible
+                                            UI development.
+                                        </li>
+                                        <li>
+                                            Participated in Agile sprint ceremonies and contributed to delivering
+                                            high-quality releases.
+                                        </li>
+                                        <li>
+                                            Followed clean code principles and implemented reusable component
+                                            structures.
+                                        </li>
+                                        <li>
+                                            Maintaning 100% test cases
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <div class="timeline-item" style="page-break-before: always;">
+                                <div class="timeline-content">
+                                    <h3>Software Engineer</h3>
+                                    <h4>Grasko Solutions</h4>
+                                    <p class="timeline-date">April 2018 - September 2024</p>
+                                    <ul class="experience-list">
+                                        <li>
+                                            Developed and maintained complex web applications using
+                                            React.js, JSX, Virtual DOM and React.js Component Lifecycle methods for
+                                            efficient UI development.
+                                        </li>
+                                        <li>
+                                            Implemented state management using Redux and Context API.
+                                        </li>
+                                        <li>
+                                            Optimized application performance through code-splitting and lazy loading.
+                                        </li>
+                                        <li>
+                                            Utilized React.js Hooks for cleaner and more efficient code.
+                                        </li>
+                                        <li>
+                                            Integrated RESTful APIs for data fetching and manipulation.
+                                        </li>
+                                        <li>
+                                            Ensured cross-browser compatibility and responsiveness through CSS-in-JS
+                                            libraries and styled-components.
+                                        </li>
+                                        <li>
+                                            Collaborated with backend developers to design and implement microservices
+                                            architecture.
+                                        </li>
+                                        <li>
+                                            Led code reviews and mentored junior developers on best practices and coding
+                                            standards.
+                                        </li>
+                                        <li>
+                                            Worked with CI/CD pipelines using Jenkins, Docker, and Kubernetes for
+                                            seamless deployment and scaling.
+                                        </li>
+                                        <li>
+                                            Node.js API Development: Developed RESTful APIs using Express.js,
+                                            implementing robust backend services with Node.js Event Loop, Node.js
+                                            Middleware, and Node.js NPM for efficient application support.
+                                        </li>
+                                    </ul>
+
+                                </div>
+                            </div>
+                            <!-- Add more timeline-item divs as needed -->
+                        </div>
+                    </div>
+
+                    <div class="section">
+                        <i class="fa fa-folder-open icon-ini" aria-hidden="true"></i>
+                        <h2 class="section-title" style="margin-right: 326px">
+                            Projects
+                        </h2>
+
+                        <div class="timeline">
+                            <!-- New JPMC Project: Confi Agreement -->
+                            <div class="timeline-item">
+                                <div class="timeline-content">
+                                    <h3 style="font-size: x-large">
+                                        Confi Agreement – JPMC (via Cognizant)
+                                    </h3>
+                                    <p>Sept 2024 – June 2025</p>
+                                    <p>
+                                        Confi Agreement is an internal enterprise agreement processing platform
+                                        developed for JPMorgan Chase to manage confidentiality workflows across
+                                        departments with signature module. Built with a focus on performance and
+                                        security, it leverages
+                                        React.js for dynamic interface interactions and REST API integration for
+                                        real-time document tracking and auditability.
+                                    </p>
+                                    <ol>
+                                        <li>
+                                            <p>Developed UI components using React.js and Redux for agreement
+                                                generation, approval, and version tracking with jpmc Aurora framework.
+                                            </p>
+                                        </li>
+                                        <li>
+                                            <p>Implemented secure REST API integrations to ensure encrypted data
+                                                transfer and user access controls.</p>
+                                        </li>
+                                        <li>
+                                            <p>Integrated validation rules to streamline the contract lifecycle and
+                                                reduce user errors during submission.</p>
+                                        </li>
+                                        <li>
+                                            <p>Collaborated with product owners and legal teams to capture compliance
+                                                needs and adapt workflows accordingly.</p>
+                                        </li>
+                                        <li>
+                                            <p>Enhanced user experience through responsive design and performance tuning
+                                                for high-load enterprise usage.</p>
+                                        </li>
+                                    </ol>
+                                </div>
+                            </div>
+                            <div class="timeline-item" style="page-break-before: always;">
+                                <div class="timeline-content">
+                                    <h3 style="font-size: x-large">
+                                        CDA - Care Delivery App (Grasko Solutions)
+                                    </h3>
+                                    <p>Feb 2020 - Sep 2024</p>
+                                    <p>
+                                        CDA is a JSON-based component rendering platform designed for creating forms
+                                        with existing components. It features a custom Redux handler for state
+                                        management, which automatically saves component data to MongoDB on every change.
+                                        This auto-saving functionality is debounced to prevent excessive updates. The
+                                        primary goal of the CDA project is to simplify the creation of forms using
+                                        existing components within the system, utilizing React.js for the frontend and
+                                        Node.js for the backend.
+                                    </p>
+
+                                    <ol>
+                                        <li>
+                                            <p>Developed the backend API using Node.js and Express.js for efficient data
+                                                handling and integration with MongoDB, employing Node.js Event Loop and
+                                                Middleware for optimized performance.</p>
+                                        </li>
+                                        <li>
+                                            <p>JSON-based component rendering platform utilizing React.js for dynamic
+                                                and reusable UI components.</p>
+                                        </li>
+                                        <li>
+                                            <p>Custom Redux handler for state management in React.js applications,
+                                                ensuring smooth state transitions and data flow.</p>
+                                        </li>
+                                        <li>
+                                            <p>Automatic saving of component data to MongoDB with debouncing to minimize
+                                                excessive updates, leveraging Node.js asynchronous programming.</p>
+                                        </li>
+                                        <li>
+                                            <p>Simplified form creation using existing React.js components and Node.js
+                                                backend services for seamless integration.</p>
+                                        </li>
+                                    </ol>
+                                </div>
+
+                            </div>
+                            <div class="timeline-item">
+                                <div class="timeline-content">
+                                    <h3 style="font-size: x-large">
+                                        Bombie - Drag and Drop UI Builder
+                                    </h3>
+                                    <p>April 2022 - January 2024</p>
+                                    <p>
+                                        <a href="https://github.com/amith-moorkoth/bombie"
+                                            target="_blank">https://github.com/amith-moorkoth/bombie</a>
+                                    </p>
+                                    <p>
+                                        Bombie is a drag-and-drop builder for Material-UI
+                                        components in React, designed to streamline the creation
+                                        of React components through an intuitive interface. This
+                                        tool allows users to visually assemble Material-UI
+                                        components and generate corresponding React code,
+                                        significantly simplifying the development process.
+                                    </p>
+
+                                    <ol>
+                                        <li>
+                                            <p>
+                                                <strong>Drag-and-Drop Interface</strong>: This feature
+                                                allows you to easily arrange and organize components
+                                                by dragging and dropping them. It’s a convenient way
+                                                to create complex UI layouts without writing extensive
+                                                code manually.
+                                            </p>
+                                        </li>
+                                        <li>
+                                            <p>
+                                                <strong>Code Generation</strong>: Material-UI’s
+                                                automatic code generation is a time-saving feature. As
+                                                you design your UI visually, it generates React
+                                                component code for you. This ensures consistency and
+                                                reduces the chances of errors.
+                                            </p>
+                                        </li>
+                                        <li>
+                                            <p>
+                                                <strong>Component Customization</strong>: Being able
+                                                to customize Material-UI components directly within
+                                                the interface is fantastic. You can tweak properties
+                                                like colors, typography, and spacing to match your
+                                                specific design requirements.
+                                            </p>
+                                        </li>
+                                        <li>
+                                            <p>
+                                                <strong>Real-time Preview</strong>: The real-time
+                                                preview feature is invaluable. As you make changes to
+                                                components, you can instantly see how they’ll appear
+                                                in the final UI. This helps you iterate quickly and
+                                                make informed design decisions.
+                                            </p>
+                                        </li>
+                                    </ol>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-              </div>
             </div>
-          </div>
         </div>
-      </div>
     </div>
 
     <!-- Bootstrap JS and dependencies -->
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-  </body>
-</html>
+</body>
 
+</html>
